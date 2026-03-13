@@ -2,15 +2,11 @@ import { useMemo } from "react";
 import TwoArrowsIcon from "@/assets/icon/two-arrows-icon.svg?react";
 import SmallArrowIcon from "@/assets/icon/small-arrow-icon.svg?react";
 
-export type SortKey = "popularity" | "rating_desc" | "price_asc" | "price_desc";
+import type { SortDropdownProps, SortKey } from "@/types/sortDropdown";
 
-export default function SortDropdown({
-  value,
-  onChange,
-}: {
-  value: SortKey;
-  onChange: (value: SortKey) => void;
-}) {
+export type { SortKey } from "@/types/sortDropdown";
+
+export default function SortDropdown({ value, onChange }: SortDropdownProps) {
   const label = useMemo(() => {
     switch (value) {
       case "popularity":

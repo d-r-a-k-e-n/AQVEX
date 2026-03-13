@@ -1,4 +1,5 @@
 import ArrowIcon from "@/assets/icon/arrow-icon.svg?react";
+import type { PaginationProps } from "@/types/pagination";
 
 function PaginationItem({
   number,
@@ -24,12 +25,7 @@ export default function Pagination({
   setPage,
   visiblePages,
   totalPages,
-}: {
-  page: number;
-  setPage: React.Dispatch<React.SetStateAction<number>>;
-  visiblePages: number[];
-  totalPages: number;
-}) {
+}: PaginationProps) {
   return (
     visiblePages?.length !== 1 && (
       <div className="flex items-center justify-center gap-3">

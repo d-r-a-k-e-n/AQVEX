@@ -1,14 +1,6 @@
-export default function Input({
-    label,
-    icon,
-    value,
-    onChange,
-  }: {
-    label: string;
-    icon?: React.ReactNode;
-    value?: string;
-    onChange?: (value: string) => void;
-  }) {
+import type { InputProps } from "@/types/input";
+
+export default function Input({ label, icon, value, onChange }: InputProps) {
     return (
       <div className="relative flex items-center w-full max-w-md">
         {icon && <div className="absolute left-4 text-slate-700">{icon}</div>}
