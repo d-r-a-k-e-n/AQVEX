@@ -10,8 +10,9 @@ export default function Footer() {
     <footer className="max-w-[1498px] mx-auto px-6 flex items-center justify-between mb-5">
       <div className="flex items-center gap-4">
         <div className="flex gap-1">
-          {" "}
-          <SmallLogoIcon width={40} />
+          <a href="/">
+            <SmallLogoIcon width={40} />
+          </a>
           <MadeInUkraineIcon width={58} height={40} />
         </div>
         <p className="text-[#8090A4] text-[14px]">
