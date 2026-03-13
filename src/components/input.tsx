@@ -1,9 +1,13 @@
 export default function Input({
     label,
     icon,
+    value,
+    onChange,
   }: {
     label: string;
     icon?: React.ReactNode;
+    value?: string;
+    onChange?: (value: string) => void;
   }) {
     return (
       <div className="relative flex items-center w-full max-w-md">
@@ -12,6 +16,8 @@ export default function Input({
           className="w-full py-3 pl-12 pr-4 bg-[#f1f3f6] text-[#2d3a4b] text-[18px] rounded-2xl outline-none placeholder:text-[#2d3a4b] transition-all focus:ring-2 focus:ring-blue-200"
           type="text"
           placeholder={label}
+          value={value}
+          onChange={(e) => onChange?.(e.target.value)}
         />
       </div>
     );
